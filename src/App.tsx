@@ -1,6 +1,13 @@
 import { Fragment } from "react";
 import ListGroup from "./components/ListGroup";
-function App() {
+const items =[ 
+  'Nairobi',
+  'Nakuru',
+  'Nanyuki',
+  'Kisii',
+  'Kisumu',
+]
+{items.map(item =><li> {item}</li>)}
   return (
     <Fragment>
       <ul className="list-group">
