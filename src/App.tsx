@@ -7,6 +7,12 @@ const items =[
   'Kisii',
   'Kisumu',
 ]
+
+// Declare the function named myFunction
+function myFunction() {
+  alert("Hello World!");
+}
+
 {items.map(item =><li> {item}</li>)}
   return (
     <Fragment>
