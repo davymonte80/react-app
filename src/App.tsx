@@ -3,15 +3,27 @@ import ListGroup from "./components/ListGroup";
 
 let items = ["Nairobi", "Nakuru", "Nanyuki", "Kisii", "Kisumu"];
 items = [];
-
-const App = () => {
-    {
-    return (
-      <Fragment>
-        <h1>List</h1>
-        <p>No Item found</p>
-      </Fragment>
-    );
+if (items.length > 0) {
+  return (
+    <Fragment>
+      <h1>List</h1>
+      <ul>
+        {items.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
+    </Fragment>
+  );
+} else {
+  // If no items found
+  return (
+    <Fragment>
+      <h1>List</h1>
+      <p>No Item found</p>
+    </Fragment>
+  );
+}
+};
   }
 
   return (
