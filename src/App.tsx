@@ -1,17 +1,22 @@
 import React, { Fragment } from "react";
 import ListGroup from "./components/ListGroup";
 
-const items = ["Nairobi", "Nakuru", "Nanyuki", "Kisii", "Kisumu"];
+let items = ["Nairobi", "Nakuru", "Nanyuki", "Kisii", "Kisumu"];
+items = [];
 
-// Declare the function named myFunction
-function myFunction() {
-  alert("Hello World!");
-}
-
-// Define the functional component App
 const App = () => {
+  if (items.length === 0) {
+    return (
+      <Fragment>
+        <h1>List</h1>
+        <p>No Item found</p>
+      </Fragment>
+    );
+  }
+
   return (
     <Fragment>
+      <h1>List</h1>
       <ul className="list-group">
         {items.map((item) => (
           <li key={item} className="list-group-item">
