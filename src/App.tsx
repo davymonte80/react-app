@@ -5,7 +5,7 @@ let items = ["Nairobi", "Nakuru", "Nanyuki", "Kisii", "Kisumu"];
 items = [];
 
 const App = () => {
-  if (items.length === 0) {
+    {
     return (
       <Fragment>
         <h1>List</h1>
@@ -19,7 +19,11 @@ const App = () => {
       <h1>List</h1>
       <ul className="list-group">
         {items.map((item) => (
-          <li key={item} className="list-group-item">
+          <li
+            className="list-group-item"
+            key={item}
+            onClick={() => console.log("Clicked")}
+          >
             {item}
           </li>
         ))}
