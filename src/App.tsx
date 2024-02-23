@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-
+import { Profile } from "next-auth";
 const App = () => {
   let items = ["Nairobi", "Nakuru", "Nanyuki", "Kisii", "Kisumu"];
   // items = []; // Uncomment this line to test with an empty array
